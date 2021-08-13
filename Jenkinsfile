@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Checking version') {
             steps {
-                bat 'javac -version'
+                sh 'javac -version'
             }
         }
         stage('Compiling') {
             steps {
-                bat 'javac Hello.java'
+                sh 'javac Hello.java'
             }
         }
         stage('Running') {
             steps {
-                bat 'java Hello'
+                sh 'java Hello'
             }
         }
     }
